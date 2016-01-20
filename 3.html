@@ -1,0 +1,36 @@
+<!--//js can change html styles-->
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+      <h1>What can Javascript do? </h1>
+      <p id=demo>JavaScript can change the style of a HTML element</p>
+      
+      <script>
+          function changeCss(){
+              var x = document.getElementById("demo");
+              x.style.fontSize = "35px";
+              x.style.color = "red";
+          }
+      </script>
+      
+      <button type="button" onclick="changeCss()">Click For Change</button>
+      
+      
+      
+
+      
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
