@@ -10,24 +10,62 @@
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-      <h1>JavaScript can validate Input </h1>
-      <p>Please Input a number between 1 and 10:</p>
+<!--
+      <h1>JavaScript Can Validate Input</h1>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x, text;
+
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("numb").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid";
+    } else {
+        text = "Input OK";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+-->
+      <h1>JavaScript Can Validate Input</h1>
+      <p>Please input a number between 1 and 10:</p>
       
-      <input id="number">
-      <button type="button" onclick="myFunction()"> Submit</button>
+      <input id="numb">
+      
+      <button type="button" onclick="myFunction()">Submit</button>
       
       <p id="demo"></p>
       
       <script>
-          function number(){
+          
+          function myFunction() {
               var x, text;
+
+    // Get the value of the input field with id="numb"
+              x = document.getElementById("numb").value;
+
+    // If x is Not a Number or less than one or greater than 10
               
-              //get the value of the input field with id="number"
-              x = document.getElementById("number").Value;
-              
-              //if x is NaN or < 1 or >10
-          }
-      </script>
+              if (isNaN(x) || x < 1 || x > 10) {
+                  text = "please enter as instructed";
+              } 
+              else {
+        text = "Input OK";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
       
       
 
