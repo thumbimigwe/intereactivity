@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Enjoy Delicious Fried Food!</title>
+
+<script language=javascript>
+function billme()
+{
+var v1= document.order.frenchfriesQty.value;
+var v2= document.order.hamburgerQty.value;
+var v3= document.order.drinkQty.value;
+var v4= document.order.discountRB[0];
+var v5= document.order.discountRB[1];
+var v6= document.order.discountRB[2];
+var v7= document.order.donateCB.checked;	
+//These lines define the variables.
+
+v1= parseInt(v1);
+v2= parseInt(v2);
+v3= parseInt(v3);
+//These lines make sure that variables 1, 2, and 3 are numbers.
+
+order.subtotalBox.value= (v1*2)+(v2*3)+(v3*1.50)
+
+if (document.order.discountRB[0].checked) {
+document.order.subtotalBox.value= (order.subtotalBox.value)*0.9
+}
+else if (document.order.discountRB[1].checked) {
+document.order.subtotalBox.value= (order.subtotalBox.value)*0.95
+}
+//These lines assign discount function to the radio buttons.
+
+document.order.taxBox.value= (document.order.subtotalBox.value)*0.07
+
+
+
+if (document.order.donateCB.checked) {
+order.grandtotalBox.value= +1(order.subtotalBox.value*1.07)
+}
+else {
+order.grandtotalBox.value= (order.subtotalBox.value*1.07)
+}
+//These lines assign function to the checkbox.
+
+
+if (document.order.discountRB[0].checked) {
+document.order.savingsBox.value= ((v1*2)+(v2*3)+(v3*1.50))*0.1
+}
+else if (document.order.discountRB[1].checked) {
+document.order.savingsBox.value= ((v1*2)+(v2*3)+(v3*1.50))*0.05
+} 
+else if (document.order.discountRB[2].checked) {
+document.order.savingsBox.value= 0
+}
+//These lines define what should be displayed in the discount box.
+
+}
+
+
+function burgerImage() {
+document.mainpic.src="hamburger.jpg"
+}
+
+function friesImage(){
+document.mainpic.src="frenchfries.jpg"
+}
+
+function drinkImage(){
+document.mainpic.src="drink.jpg"
+}
+
+function restoreImage() {
+document.mainpic.src="restaurant.jpg"
+}
+
+
+</script>
+</head>
+
+<body>
+    <h1 align=center>Eat some food!</h1><br>
+    <p align=center><img src="restaurant.jpg" alt="Picture" id="mainpic" /></p> <br>
+    
+    <form id=order name=order>
+        <p align=center><strong>Please fill out the form accordingly. Put the number of items you want in the box next to each.</strong><br>
+            
+            <br> French Fries $2.00 <input type="text" name="frenchfriesQty" size="2" value="0" onmouseover= "friesImage()" onmouseout= "document.mainpic.src="restaurant.jpg>
+        <br>Hamburger $3.00 <input type="text" name="hamburgerQty" size="2" value="0" onmouseover= "burgerImage()" onmouseout= "document.mainpic" src="">
+            <br> Drink $1.50 <input type="text" name="drinkQty" size="2" value="0" onmouseover= "drinkImage()" onmouseout= "document.mainpic" src="restaurant.jpg">
+            <br>
+            <br><strong>Please select one of the following options:</strong><br>
+<input type="radio" name="discountRB" /> Pitt Student (10% off) <br>
+<input type="radio" name="discountRB" /> Pitt Professor (5% off) <br>
+<input type="radio" name="discountRB" /> Neither Student or Professor (no discount) <br>
+<br>
+<input type="checkbox" name="donateCB" /> Donate $1 to the Pitt Old Instructor's Retirement Fund<br>
+<br>
+<input type="button" name="calcBtn" value="Ring It UP" onclick="billme(document.order)" />
+<input type="reset" name="resetBtn" value="Clear Form" />
+<br>
+<br>
+SubTotal: $<input type="text" name="subtotalBox" size="6" value="0" /><br>
+Tax: $<input type="text" name="taxBox" size="6" value="0" /><br>
+Grand Total: $<input type="text" name="grandtotalBox" size="6" value="0" /><br>
+Money saved with discounts: $<input type="text" name="savingsBox" size="6" value="0" /><br>
+</p>
+</body>
+</html>

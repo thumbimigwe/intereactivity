@@ -4,23 +4,43 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> </title>
+    <title> Form </title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-
+      
+      
+      
 <!--
-      <h1>What can i do with JavaScript?</h1>
-      <p id="demo">
-          Javascript can change HTML content.
-      </p>
-      
-      <button type="button" onclick="document.getElementById('demo').innerHTML='Hello Javascript!'">Click Me!</button>
+      <html ng-app='contactForm'>
+  <head><title>Form</title></head>
+  <body ng-controller='contactCtrl'>
 -->
+    <div id='container'>
+      <h2 class='contact-form'>Link Up</h2>
+      <form ng-submit='addMessage' action="index.html" method='post'>
+        <label for="name">Name:</label>
+        <input type="text" id='name' ng-model='todoMessage' placeholder='Your Name'/>
+        <label for="email">Click Me - Email:</label>
+    <input type="email" id='email' placeholder='email@gmail.com'/>
+        <label for="msg">Click Me - Messages:</label>
+        <textarea name="messages" id="msg" cols="30" rows="5" placeholder='Type something here!'></textarea>
+        <input type="submit"/>
+      </form>
+    </div>
+
 
       
-
+      
+      
+    
+      
+      <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+      <script>
+          currentMe
+      </script>
+      
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
