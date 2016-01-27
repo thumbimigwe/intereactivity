@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html ng-app>
     <head>
-        <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>	    
+        
+        <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+        
     </head>
     
     <body>
-        <input ng-model="text"><span>hey {{text}}!</span>
+        
+        
+        <form>
+            first Name: <span><input type="text" id="fName" name="fName" placeholder="enter your first name"></span>
+            Last name:<span><input type="text" id="lName" name="lName" placeholder="enter your Last name"></span>
+            <br><br>
+            
+            Email: <input type="email" id="mail" placeholder="example@example.com" name="mail"><br><br>
+            
+            Number:  <input type="tel" name="telephone" id="PhoneNumber" placeholder="your number"> <br><br>
+            
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        
+        
+        
+        
+        <script>
+            var fireBaseRef = new FireBase ('https://formjs.firebaseio.com/');
+        </script>
+        <script src="js/app.js"></script>
     </body>
 
 </html>
